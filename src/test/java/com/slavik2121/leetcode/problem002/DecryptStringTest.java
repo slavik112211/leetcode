@@ -16,7 +16,7 @@ class DecryptStringTest {
     }
 
     @Test
-    void testLongestCommonPrefix() {
+    void testDecryptString() {
         str = "10#11#12";
         assertEquals("jkab", decryptString.freqAlphabets(str));
 
