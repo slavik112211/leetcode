@@ -1,4 +1,4 @@
-package com.slavik2121.leetcode;
+package com.slavik2121.leetcode.problem001;
 
 /**
  * https://leetcode.com/problems/longest-common-prefix/
@@ -67,28 +67,5 @@ class CommonPrefix {
             if(currentCharIndexOutOfBounds) break;
         }
         return commonPrefix.toString();
-    }
-
-    public static void main(String[] args) {
-        String[] strs;
-        CommonPrefix commonPrefix = new CommonPrefix();
-
-        strs = new String[]{"flower","flow","flight"};
-        System.out.println(commonPrefix.longestCommonPrefix(strs));
-
-        strs = new String[]{"flow","flow","flow"};
-        System.out.println(commonPrefix.longestCommonPrefix(strs));
-
-        strs = new String[]{"flight"};
-        System.out.println(commonPrefix.longestCommonPrefix(strs));
-
-        strs = new String[]{""};
-        System.out.println(commonPrefix.longestCommonPrefix(strs));
-
-        strs = new String[]{"flower","flow"};
-        System.out.println(commonPrefix.longestCommonPrefix(strs));
-
-        strs = new String[]{"dog","racecar","car"};
-        System.out.println(commonPrefix.longestCommonPrefix(strs));
     }
 }
