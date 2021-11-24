@@ -38,13 +38,13 @@ class LinkedListSwapNodesInPairs {
             return head;
         }
 
-        ListNode preLHS = null, lhs = head, rhs = head.next, newHead;
-
         // initial pair swap
+        ListNode lhs = head;
+        ListNode rhs = head.next;
         lhs.next = rhs.next;
         rhs.next = lhs;
-        newHead = rhs;
-        preLHS = lhs;
+        head = rhs;
+        ListNode preLHS = lhs;
 
         // consequent pair swaps
         while(preLHS.next != null && preLHS.next.next != null) {
@@ -57,6 +57,6 @@ class LinkedListSwapNodesInPairs {
             preLHS = lhs;
         }
 
-        return newHead;
+        return head;
     }
 }
