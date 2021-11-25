@@ -61,10 +61,14 @@ class LinkedListFindWinnerOfCircularGame {
         currentFriend = firstFriend;
         ListNode prevFriend = lastFriend;
         while(currentFriend.next != currentFriend) {
+
+            // k-iteration
             for(int i = 1; i < k; i++) {
                 prevFriend = currentFriend;
                 currentFriend = currentFriend.next;
             }
+
+            // elimination
             prevFriend.next = currentFriend.next;
             currentFriend = currentFriend.next;
         }
