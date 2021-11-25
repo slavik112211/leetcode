@@ -35,24 +35,20 @@ class BinaryTreeMinimumDepth {
         if(node == null) return 0;
 
         int shortestPathCurrentNode = 1;
-        int shortestPathLeftChild = 0, shortestPathRightChild = 0;
 
-        if(isLeafNode(node)) {
-            return shortestPathCurrentNode;
+        if(isLeafNode(node)) return shortestPathCurrentNode;
+
+        int shortestPathLeftChild = minDepth(node.left);
+        int shortestPathRightChild = minDepth(node.right);
+
+        if(shortestPathLeftChild == 0) {
+            return shortestPathCurrentNode + shortestPathRightChild;
+        } else if(shortestPathRightChild == 0) {
+            return shortestPathCurrentNode + shortestPathLeftChild;
         } else {
-            shortestPathLeftChild = minDepth(node.left);
-            shortestPathRightChild = minDepth(node.right);
-
-            int shortestPath;
-            if(shortestPathLeftChild == 0) {
-                shortestPath = shortestPathRightChild;
-            } else if(shortestPathRightChild == 0) {
-                shortestPath = shortestPathLeftChild;
-            } else {
-                shortestPath = (shortestPathLeftChild < shortestPathRightChild) ?
-                        shortestPathLeftChild : shortestPathRightChild;
-            }
-            return shortestPathCurrentNode + shortestPath;
+            return shortestPathCurrentNode +
+                    ((shortestPathLeftChild < shortestPathRightChild) ?
+                    shortestPathLeftChild : shortestPathRightChild);
         }
     }
 
