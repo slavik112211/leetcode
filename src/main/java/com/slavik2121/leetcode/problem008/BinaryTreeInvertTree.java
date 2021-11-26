@@ -4,6 +4,8 @@ package com.slavik2121.leetcode.problem008;
  * https://leetcode.com/problems/invert-binary-tree/
  *
  * November 24, 2021
+ *
+ * 226. Invert Binary Tree
  * Difficulty: Easy
  *
  * Given the root of a binary tree, invert the tree, and return its root.

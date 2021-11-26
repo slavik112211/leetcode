@@ -30,7 +30,7 @@ package com.slavik2121.leetcode.problem007;
  */
 class BinaryTreeMinimumDepth {
 
-    // breadth-first search for a leaf node
+    // depth-first search for a leaf node
     public int minDepth(TreeNode node) {
         if(node == null) return 0;
 
