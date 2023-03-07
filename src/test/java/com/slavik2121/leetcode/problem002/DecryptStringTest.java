@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DecryptStringTest {
 
     String str;
-    DecryptString decryptString;
+    DecryptString2 decryptString;
 
     @BeforeEach
     void setUp() {
-        decryptString = new DecryptString();
+        decryptString = new DecryptString2();
     }
 
     @Test
