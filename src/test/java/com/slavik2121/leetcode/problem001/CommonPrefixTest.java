@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class CommonPrefixTest {
 
     String[] strs;
-    CommonPrefix commonPrefix;
+    CommonPrefix2 commonPrefix;
 
     @BeforeEach
     void setUp() {
-        commonPrefix = new CommonPrefix();
+        commonPrefix = new CommonPrefix2();
     }
 
     @Test
