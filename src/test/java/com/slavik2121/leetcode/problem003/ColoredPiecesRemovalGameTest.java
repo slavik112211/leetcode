@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ColoredPiecesRemovalGameTest {
 
     String input;
-    ColoredPiecesRemovalGame sut;
+    ColoredPiecesRemovalGame2 sut;
 
     @BeforeEach
     void setUp() {
-        sut = new ColoredPiecesRemovalGame();
+        sut = new ColoredPiecesRemovalGame2();
     }
 
     @Test
@@ -25,5 +25,8 @@ class ColoredPiecesRemovalGameTest {
 
         input = "ABBBBBBBAAA";
         assertEquals(false, sut.winnerOfGame(input));
+
+        input = "AAABAAABBB";
+        assertEquals(true, sut.winnerOfGame(input));
     }
 }
